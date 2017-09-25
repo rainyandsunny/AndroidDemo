@@ -5,23 +5,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends Activity {
+public class BActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_b);
     }
 
     public void jump(View view){
 
-        Intent intent = new Intent(MainActivity.this,MyService.class);
+        Intent intent = new Intent(BActivity.this,MyService.class);
         startService(intent);
     }
 
-    public void jumpActivityB(View view){
-
-        Intent intent = new Intent(MainActivity.this,BActivity.class);
-        startActivity(intent);
-    }
 }
